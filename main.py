@@ -24,7 +24,10 @@ class Commands:
             print(str(event), end="")
 
 if __name__ == '__main__':
-    print("Hello, my name is nvgator!")
-    print("How can i help you?")
-    promt = input()
-    Commands.simple_promt(promt)
+    print("Hello! How can i help you?")
+
+    while True:
+       promt = input("\nВы:") 
+       if promt.lower() in ['q', 'exit']:
+           break
+       print(f'\nAI: {Commands.simple_promt(promt)}')
